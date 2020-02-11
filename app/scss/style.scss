@@ -2,6 +2,8 @@
 @import "global";
 @import "fonts";
 
+//start header
+
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -51,6 +53,11 @@
     font-size: 14px;
   }
 }
+
+//end header
+
+//start search
+
 .search {
   background-repeat: no-repeat;
   background-position: center;
@@ -93,7 +100,7 @@
         color: #90a4ae;
       }
     }
-    button{
+    button {
       position: absolute;
       border: none;
       background-color: transparent;
@@ -102,3 +109,118 @@
     }
   }
 }
+
+//end search
+
+//start products
+
+.products {
+  padding: 110px 0 110px;
+  background-color: $gray;
+}
+
+.products__inner-btn {
+  text-align: center;
+  margin-bottom: 60px;
+  button {
+    padding: 12px 21px;
+    border: none;
+    background-color: #fff;
+    color: $bg;
+    cursor: pointer;
+    & + button {
+      margin-left: 5px;
+    }
+    &.mixitup-control-active{
+      background-color: $red;
+      color: #fff;
+      outline: none;
+    }
+  }
+}
+.products__inner-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.products__item {
+  box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+  max-width: 442px;
+  width: 100%;
+  margin-bottom: 30px;
+  &-img {
+    min-height: 250px;
+    background-repeat: no-repeat;
+    display: block;
+    background-position: center;
+    background-size: cover;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 90px;
+    align-items: center;
+    font-weight: 500;
+    border-bottom: 1px solid #e7ecf2;
+  }
+  &-name {
+    max-width: 310px;
+  }
+  &-title {
+    font-size: 18px;
+    color: $bg;
+    display: block;
+  }
+  &-category {
+    display: block;
+    font-size: 14px;
+    color: $green;
+  }
+  &-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: $bg;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    align-items: center;
+    padding: 10px 30px;
+  }
+  &-author {
+    display: flex;
+    align-items: center;
+    span {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .avatar {
+      display: inline-block;
+      margin-right: 14px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.products__bottom-btn{
+  text-align: center;
+  button{
+    margin: 45px 5px 0;
+    border: none;
+    box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+    background-color: #fff;
+    color: $bg;
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+}
+
+
+//end products

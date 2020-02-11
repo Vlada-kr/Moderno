@@ -31,7 +31,8 @@ gulp.task('js', function () {
 //указываются пути до js в node_modules
 gulp.task('script', function () {
     return gulp.src([
-        'node_modules/slick-carousel/slick/slick.min.js'
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/mixitup/dist/mixitup.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
