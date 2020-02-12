@@ -131,14 +131,14 @@
     & + button {
       margin-left: 5px;
     }
-    &.mixitup-control-active{
+    &.mixitup-control-active {
       background-color: $red;
       color: #fff;
       outline: none;
     }
   }
 }
-.products__inner-box{
+.products__inner-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -208,18 +208,17 @@
       background-repeat: no-repeat;
     }
   }
-  &-star{
+  &-star {
     font-size: 12px;
-    span{
+    span {
       color: $bg;
-      
     }
   }
 }
 
-.products__bottom-btn{
+.products__bottom-btn {
   text-align: center;
-  button{
+  button {
     margin: 45px 5px 0;
     border: none;
     box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
@@ -230,94 +229,91 @@
   }
 }
 
-
 //end products
 //start product-slider
-.product-slider{
+.product-slider {
   padding: 110px 0 120px;
 }
-
 
 //end product-slider
 
 // start advantages
-.advantages{
-background-color: $bg;
-padding: 110px 0;
+.advantages {
+  background-color: $bg;
+  padding: 110px 0;
 }
 .advantages__title {
   color: #fff;
 }
 
-
-.advantages__inner{
+.advantages__inner {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.advantages__item{
-max-width: 370px;
-text-align: center;
-padding: 0 15px;
-&:hover{
-  .advantages__item-images{
-    background-color: $green;
-  }
-  .advantages__item-title{
-    color: $green;
-  }
-  .advantages__item-images {
-    svg{  
-      color: #fff;
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0 15px;
+  &:hover {
+    .advantages__item-images {
+      background-color: $green;
+    }
+    .advantages__item-title {
+      color: $green;
+    }
+    .advantages__item-images {
+      svg {
+        color: #fff;
+      }
     }
   }
-}
-&-images{
-  transition: all .3s;
-  width: 114px;
-  height: 114px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 30px;
-}
-&-title{
-  transition: all .3s;
-color: #fff;
-@include f500;
-margin-bottom: 25px;
-font-size: 24px;
-}
-&-text{
-font-size: 15px;
-}
+  &-images {
+    transition: all 0.3s;
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &-title {
+    transition: all 0.3s;
+    color: #fff;
+    @include f500;
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+  &-text {
+    font-size: 15px;
+  }
 }
 
-.icon-lock{
-  svg{
+.icon-lock {
+  svg {
     width: 50px;
     color: #000;
   }
 }
-.icon-gift{
-  svg{
+.icon-gift {
+  svg {
     width: 70px;
     color: #000;
   }
 }
-.icon-heart{
-svg{
-  width: 86px;
-  color: #000;
-}
+.icon-heart {
+  svg {
+    width: 86px;
+    color: #000;
+  }
 }
 //end advantages
 
 //start author
-.author{
+.author {
   background-image: url(../images/author_bg.png);
   background-position: center;
   background-size: cover;
@@ -326,7 +322,7 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  &__box{
+  &__box {
     background-color: $green;
     width: 100%;
     max-width: 650px;
@@ -335,17 +331,17 @@ svg{
     align-items: center;
     justify-content: center;
   }
-  &__title{
+  &__title {
     font-size: 30px;
     line-height: 30px;
     color: #fff;
     margin-right: 45px;
     max-width: 270px;
-    span{
+    span {
       @include f700;
     }
   }
-  &__link{
+  &__link {
     font-size: 18px;
     line-height: 36px;
     padding: 14px 40px;
@@ -353,6 +349,34 @@ svg{
   }
 }
 
-
-
 //end author
+
+//start tutorial
+.tutorial {
+  padding: 70px 0 120px;
+}
+.tutorial__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tutorial__item {
+  max-width: 370px;
+  width: 100%;
+  &-image {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &-title {
+    font-size: 24px;
+    text-align: center;
+    background-color: #f8f8f8;
+    @include f700;
+    padding: 30px 10px;
+    color: $bg;
+  }
+}
+
+//end tutorial
