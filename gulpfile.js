@@ -31,8 +31,9 @@ gulp.task('js', function () {
 //указываются пути до js в node_modules
 gulp.task('script', function () {
     return gulp.src([
-        'node_modules/slick-carousel/slick/slick.min.js',
-        'node_modules/mixitup/dist/mixitup.min.js'
+        'node_modules/mixitup/dist/mixitup.min.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
+        'node_modules/slick-carousel/slick/slick.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -43,6 +44,7 @@ gulp.task('script', function () {
 gulp.task('style', function () {
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
+        'node_modules/rateyo/src/jquery.rateyo.css',
         'node_modules/slick-carousel/slick/slick.css'
     ]
     )

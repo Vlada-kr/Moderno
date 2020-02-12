@@ -72,13 +72,13 @@
     margin-bottom: 10px;
     font-size: 48px;
     line-height: 72px;
-    font-weight: 700;
+    @include f700;
   }
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 500;
+    @include f500;
   }
 
   &-form {
@@ -93,7 +93,7 @@
       border: none;
       box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 26px;
       padding-right: 60px;
       &::placeholder {
@@ -161,7 +161,7 @@
     padding: 10px 30px;
     min-height: 90px;
     align-items: center;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -179,7 +179,7 @@
   }
   &-price {
     font-size: 20px;
-    font-weight: 700;
+    @include f700;
     color: $bg;
   }
   &-info {
@@ -192,8 +192,9 @@
   &-author {
     display: flex;
     align-items: center;
+    max-width: 245px;
     span {
-      font-weight: 500;
+      @include f500;
       font-size: 14px;
     }
     .avatar {
@@ -205,6 +206,13 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+    }
+  }
+  &-star{
+    font-size: 12px;
+    span{
+      color: $bg;
+      
     }
   }
 }
@@ -224,3 +232,86 @@
 
 
 //end products
+//start product-slider
+.product-slider{
+  padding: 110px 0 120px;
+}
+
+
+//end product-slider
+
+// start advantages
+.advantages{
+background-color: $bg;
+padding: 110px 0;
+}
+.advantages__title {
+  color: #fff;
+}
+
+
+.advantages__inner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advantages__item{
+max-width: 370px;
+text-align: center;
+padding: 0 15px;
+&:hover{
+  .advantages__item-images{
+    background-color: $green;
+  }
+  .advantages__item-title{
+    color: $green;
+  }
+  .advantages__item-images {
+    svg{  
+      color: #fff;
+    }
+  }
+}
+&-images{
+  transition: all .3s;
+  width: 114px;
+  height: 114px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+&-title{
+  transition: all .3s;
+color: #fff;
+@include f500;
+margin-bottom: 25px;
+font-size: 24px;
+}
+&-text{
+font-size: 15px;
+}
+}
+
+.icon-lock{
+  svg{
+    width: 50px;
+    color: #000;
+  }
+}
+.icon-gift{
+  svg{
+    width: 70px;
+    color: #000;
+  }
+}
+.icon-heart{
+svg{
+  width: 86px;
+  color: #000;
+}
+}
+//end advantages
