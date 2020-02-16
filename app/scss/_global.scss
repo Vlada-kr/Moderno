@@ -13,6 +13,23 @@ body {
   line-height: 24px;
   color: $text;
 }
+
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
 a {
   display: inline-block;
   color: $text;
@@ -29,14 +46,16 @@ li {
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.page-content{
+  background-color: $gray;
+}
 .container-fluid {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 }
 
-.title{
+.title {
   text-align: center;
   margin-bottom: 30px;
   color: $bg;
@@ -45,9 +64,39 @@ li {
   line-height: 60px;
 }
 
-.rate-star{
+.rate-star {
   display: inline-block;
   margin-right: 13px;
+}
+
+.breadcrumbs {
+  &__inner {
+    padding: 45px 0 40px;
+  }
+  &__list {
+    a {
+      color: #b0bec5;
+    }
+    li {
+      display: inline-block;
+      position: relative;
+      &:last-child {
+        a,
+        span {
+          color: $bg;
+        }
+      }
+      & + li {
+        padding-left: 24px;
+        &::before {
+          content: "-";
+          position: absolute;
+          left: 8px;
+          color: $green;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 720px) {
