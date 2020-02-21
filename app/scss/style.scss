@@ -314,6 +314,105 @@
 .menu__btn {
   display: none;
 }
+
+//start modal
+#modal {
+  background-color: $green;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+.login__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  @include f700;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.login__wrapper {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  label {
+    position: relative;
+    &::before {
+      font-family: "icomoon";
+      position: absolute;
+      font-size: 14px;
+      color: #fff;
+      left: 18px;
+      top: 9px;
+    }
+  }
+  .login__label-name::before {
+    content: "\f007";
+    z-index: 5;
+  }
+  .login__label-pass::before {
+    content: "\f023";
+    z-index: 5;
+  }
+  input {
+    height: 43px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #76ae36;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 40px;
+    display: block;
+    width: 100%;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  button {
+    margin-top: 19px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    @include f700;
+    padding: 18px 0 16px;
+    width: 140px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+    cursor: pointer;
+  }
+}
+.create-acc {
+  margin-top: 19px;
+  text-align: center;
+  padding: 15px 0 15px 28px;
+  width: 245px;
+  text-align: center;
+  background-color: #76ae36;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  &::before{
+    content: "\f044";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+}
+.lost-pass {
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+.fancybox-button svg path{
+  fill: #fff;
+}
+//end modal
+
 //end header
 
 //start search
