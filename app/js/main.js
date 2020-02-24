@@ -43,8 +43,6 @@ $(function () {
     })
 
     //tabs
-
-    // -------------------/ jQuery /------------------- 
                                 
     $('.product-one__tabs .tab, .settings__tabs').on('click', function(event) {
         var id = $(this).attr('data-id');
