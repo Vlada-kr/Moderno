@@ -317,6 +317,7 @@
 
 //start modal
 #modal {
+  display: none;
   background-color: $green;
   max-width: 730px;
   width: 100%;
@@ -1493,6 +1494,37 @@ button.icon-sort {
   .icon-shopping-cart {
     background-color: $green;
   }
+  .jq-selectbox__select {
+    width: 82px;
+    font-size: 13px;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 28px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    right: 10px;
+    line-height: 28px;
+    font-size: 13px;
+    top: 0;
+    color: $green;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+      color: $green;
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
 }
 .product-author__box {
   display: flex;
@@ -1867,6 +1899,36 @@ button.icon-sort {
     padding: 0 10px;
     color: #707070;
   }
+  .jq-selectbox {
+    width: 540px;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    top: 0;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
 }
 //end settings
 
@@ -2188,4 +2250,130 @@ button.icon-sort {
   }
 }
 //end upload
+
+//start withdrawals
+
+.withdrawals__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.withdrawals__col {
+  max-width: 570px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  height: 100%;
+}
+.withdrawals__title {
+  @include f500;
+  font-size: 24px;
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+}
+.withdrawals__content {
+  padding-left: 35px;
+  padding-right: 40px;
+  button {
+    background-color: $green;
+    color: #fff;
+    border: none;
+    padding: 15px 36px;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+}
+.withdrawals__form-line {
+  margin-bottom: 25px;
+  label {
+    display: block;
+    width: 100%;
+    @include f500;
+    font-size: 16px;
+    color: $bg;
+    margin-bottom: 15px;
+    span {
+      color: $green;
+    }
+  }
+  select,
+  input {
+    display: block;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select-text {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    top: 0;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+}
+.withdrawals__content-items {
+  padding-bottom: 35px;
+}
+.withdrawals__content-item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+  &:nth-child(odd){
+    background-color: #f9f9f9;
+  }
+}
+.withdrawals__content-date {
+  width: 154px;
+  padding-left: 20px;
+  @include f500;
+}
+.withdrawals__content-email {
+  width: 180px;
+  @include f500;
+}
+.withdrawals__content-price {
+  width: 70px;
+  @include f700;
+}
+.withdrawals__content-status {
+  width: 88px;
+  @include f700;
+  &.withdrawals__content-paid {
+    color: $green;
+  }
+}
+
+//end withdrawals
 @import "media";
