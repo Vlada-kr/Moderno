@@ -7,9 +7,8 @@ let gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin');
 
-
 gulp.task('sass', function () {
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(autoprefixer({
@@ -29,29 +28,37 @@ gulp.task('js', function () {
         .pipe(browserSync.reload({ stream: true }))
 });
 
-
 //указываются пути до js в node_modules
 gulp.task('script', function () {
-    /*return gulp.src([
-        '',
-        ''
+    return gulp.src([
+        'node_modules/mixitup/dist/mixitup.min.js',
+        'node_modules/rateyo/src/jquery.rateyo.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('app/js'))*/
+        .pipe(gulp.dest('app/js'))
 });
 
 //указываются пути до css в node_modules
 gulp.task('style', function () {
-    return gulp.src(
-        'node_modules/normalize.css/normalize.css'   
+    return gulp.src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/rateyo/src/jquery.rateyo.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
+    ]
     )
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest('app/css'))
 });
-
-
 
 gulp.task('browser-sync', function () {
     browserSync.init({
@@ -62,9 +69,9 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'));
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/*.html', gulp.parallel('html'));
     gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
 
-gulp.task('default', gulp.parallel('script', 'style', 'sass',  'watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('script', 'style', 'sass', 'watch', 'browser-sync'));
